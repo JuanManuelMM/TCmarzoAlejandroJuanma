@@ -14,3 +14,20 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
     -fx-background-position: center;
 
 }
+.root{
+    -fx-background-color: blueviolet;
+    
+    
+}
+
+.label{
+    -fx-background-color: lightcoral;
+    -fx-opacity: 50;
+    
+}
+
+#btn1{
+    -fx-background-images: url("../images/car.png");
+    
+    
+}
