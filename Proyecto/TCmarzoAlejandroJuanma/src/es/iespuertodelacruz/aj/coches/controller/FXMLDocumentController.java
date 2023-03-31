@@ -14,9 +14,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javax.swing.text.Element;
+import javax.swing.text.html.ImageView;
 
 /**
  *
@@ -24,11 +28,8 @@ import javafx.scene.text.Text;
  */
 public class FXMLDocumentController implements Initializable {
 
-    private Label label;
-    @FXML
+
     private Label txtLabel;
-    @FXML
-    private Button button;
     @FXML
     private Text txtTextoInstrucciones;
     @FXML
@@ -36,22 +37,29 @@ public class FXMLDocumentController implements Initializable {
     
     private Punto punto;
     
-    private CocheFX coche1;
+    @FXML
+    private javafx.scene.image.ImageView coche1;
     
-    private CocheFX coche2;
+    @FXML
+    private javafx.scene.image.ImageView coche2;
+    @FXML
+    private TextArea txtArea;
+    @FXML
+    private Button btnInstrucciones;
     
     @FXML
     public void handleButtonAction(ActionEvent event) {
         
-        txtLabel.setText("Instrucciones");
+        txtArea.appendText("\nSeleccionar el coche pulsando con el ratón.\nLuego\n"
+            + "Tecla 'e': Encender el coche\n"
+            + "Tecla 'a': Apagar el coche\n"
+            + "Tecla 's': Subir freno de mano\n"
+            + "Tecla 'b': Bajar freno de mano\n"
+            + "Arrow Keys: Mover coche en dirección establecida\n" );
     }
 
     
       private void redibujar(){
-    coche1.setLayoutX(coche1.coche.getPunto().x);
-    coche1.setLayoutY(coche1.coche.getPunto().y);
-    coche2.setLayoutX(coche2.coche.getPunto().x);
-    coche2.setLayoutY(coche2.coche.getPunto().y);
     
     }
   
@@ -59,21 +67,7 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
-        
-        Punto punto1 = new Punto(160,160);
-        coche1= new CocheFX();
-        coche1.coche= new Coche(punto1);
-        Button btn1 = coche1; 
-        pnPaneEscenario.getChildren().add(coche1);
-        
-        Punto punto2 = new Punto(450,80);
-        coche2= new CocheFX();
-        coche2.coche= new Coche(punto2);
-        Button btn2 = coche2;
-        pnPaneEscenario.getChildren().add(coche2);
-        
-        
+   
         redibujar();
 
         
@@ -82,7 +76,12 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void moverObjeto(KeyEvent event) {
         //txt label para mostrar la posicion en texto
-    txtLabel.setText("Instrucciones");
+    txtArea.setText("Seleccionar el coche pulsando con el ratón. Luego \n "
+            + "Tecla 'e': Encender el coche\n"
+            + "Tecla 'a': Apagar el coche\n"
+            + "Tecla 's': Subir freno de mano\n"
+            + "Tecla 'b': Bajar freno de mano\n"
+            + "Arrow Keys: Mover coche en dirección establecida" );
 
     }
 

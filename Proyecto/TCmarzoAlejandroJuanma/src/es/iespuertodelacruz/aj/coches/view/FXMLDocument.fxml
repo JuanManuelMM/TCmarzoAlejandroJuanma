@@ -1,23 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="439.0" prefWidth="639.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="es.iespuertodelacruz.aj.coches.controller.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="439.0" prefWidth="639.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.iespuertodelacruz.aj.coches.controller.FXMLDocumentController">
     <children>
-        <Button fx:id="button" layoutX="530.0" onAction="#handleButtonAction" prefHeight="97.0" prefWidth="110.0" stylesheets="@style.css" />
-        <Label fx:id="txtLabel" minHeight="16" minWidth="69" prefHeight="97.0" prefWidth="530.0" />
-      <ImageView fitHeight="36.0" fitWidth="55.0" layoutX="558.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
-         <image>
-            <Image url="@../../../../../images/car.png" />
-         </image>
-      </ImageView>
-      <Text fx:id="txtTextoInstrucciones" layoutX="534.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instrucciones" textAlignment="CENTER" wrappingWidth="101.287109375" />
-      <Pane fx:id="pnPaneEscenario" layoutY="97.0" onKeyReleased="#moverObjeto" prefHeight="342.0" prefWidth="640.0" />
+        <Button fx:id="btnInstrucciones" layoutX="674.0" layoutY="-1.0" onAction="#handleButtonAction" prefHeight="112.0" prefWidth="114.0" stylesheets="@style.css" />
+      <Text fx:id="txtTextoInstrucciones" layoutX="680.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instrucciones" textAlignment="CENTER" wrappingWidth="101.287109375" />
+      <Pane fx:id="pnPaneEscenario" layoutY="141.0" onKeyReleased="#moverObjeto" prefHeight="419.0" prefWidth="778.0">
+         <children>
+            <ImageView fx:id="coche1" fitHeight="150.0" fitWidth="200.0" layoutX="101.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/car.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="coche2" fitHeight="150.0" fitWidth="200.0" layoutX="444.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../images/car.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <TextArea fx:id="txtArea" layoutX="-1.0" layoutY="-1.0" prefHeight="164.0" prefWidth="678.0" stylesheets="@style.css" />
     </children>
 </AnchorPane>
