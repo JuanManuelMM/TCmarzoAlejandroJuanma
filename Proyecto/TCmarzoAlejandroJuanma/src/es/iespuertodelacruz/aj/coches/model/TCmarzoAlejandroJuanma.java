@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML.java to edit this template
  */
-package es.iespuertodelacruz.aj.coches;
+package es.iespuertodelacruz.aj.coches.model;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -18,7 +18,7 @@ public class TCmarzoAlejandroJuanma extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/es/iespuertodelacruz/aj/coches/FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/es/iespuertodelacruz/aj/coches/view/FXMLDocument.fxml"));
         
         Scene scene = new Scene(root);
         
