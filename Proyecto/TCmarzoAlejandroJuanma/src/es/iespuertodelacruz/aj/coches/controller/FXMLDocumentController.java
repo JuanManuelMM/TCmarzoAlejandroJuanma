@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
@@ -43,7 +44,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     public void handleButtonAction(ActionEvent event) {
         
-        txtLabel.setText("Instrucciones");
+        txtLabel.setText("Instrucciones: \n 1)");
     }
 
     
@@ -52,7 +53,6 @@ public class FXMLDocumentController implements Initializable {
     coche1.setLayoutY(coche1.coche.getPunto().y);
     coche2.setLayoutX(coche2.coche.getPunto().x);
     coche2.setLayoutY(coche2.coche.getPunto().y);
-    
     }
   
     
@@ -85,5 +85,35 @@ public class FXMLDocumentController implements Initializable {
     txtLabel.setText("Instrucciones");
 
     }
+      public void handle(KeyEvent ke) {
+            if (ke.getCode() == KeyCode.UP) {
+                Punto punto1 = coche1.coche.getPunto();
+                double y = punto1.getY();
+                y=-10;
+                punto1.setY(y);
+                coche1.coche.setPunto(punto1);
+            }
+            if (ke.getCode() == KeyCode.DOWN) {
+                 Punto punto1 = coche1.coche.getPunto();
+                double y = punto1.getY();
+                y=+10;
+                punto1.setY(y);
+                coche1.coche.setPunto(punto1);
+            }
+            if (ke.getCode() == KeyCode.LEFT) {
+                 Punto punto1 = coche1.coche.getPunto();
+                double x = punto1.getX();
+                x=+10;
+                punto1.setX(x);
+                coche1.coche.setPunto(punto1);
+            }
+            if (ke.getCode() == KeyCode.RIGHT) {
+                 Punto punto1 = coche1.coche.getPunto();
+                double x = punto1.getX();
+                x=+10;
+                punto1.setX(x);
+                coche1.coche.setPunto(punto1);
+            }
+        }
 
 }

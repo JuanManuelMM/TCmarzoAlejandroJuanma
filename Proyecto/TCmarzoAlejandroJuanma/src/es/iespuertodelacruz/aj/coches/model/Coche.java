@@ -23,8 +23,6 @@ public class Coche{
     private boolean frenoDeManoPuesto;
     private Punto punto;
 
-
-
     public Coche( Punto punto) {
         this.punto = punto;
         frenoDeManoPuesto = true;
@@ -82,8 +80,6 @@ public class Coche{
         return respuesta;
     }
 
-        
-
     public boolean isEncendido() {
         return encendido;
     }
@@ -99,8 +95,5 @@ public class Coche{
     public void setFrenoDeManoPuesto(boolean frenoDeManoPuesto) {
         this.frenoDeManoPuesto = frenoDeManoPuesto;
     }
-
-    
-
 
 }
