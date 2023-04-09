@@ -5,6 +5,7 @@
 package es.iespuertodelacruz.aj.coches.model;
 
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 
 /**
  *
@@ -25,8 +26,8 @@ public class Coche{
 
 
 
-    public Coche( Punto punto) {
-        this.punto = punto;
+    public Coche() {
+        
         frenoDeManoPuesto = true;
         encendido = false;
        

@@ -5,11 +5,12 @@
 package es.iespuertodelacruz.aj.coches.model;
 
 import javafx.scene.control.Button;
+import javafx.scene.image.ImageView;
 
 /**
  *
  * @author dam
  */
-public class CocheFX extends Button{
+public class CocheFX extends ImageView{
     public Coche coche;
 }

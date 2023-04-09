@@ -14,12 +14,12 @@
       <Text fx:id="txtTextoInstrucciones" layoutX="695.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instrucciones" textAlignment="CENTER" wrappingWidth="101.287109375" />
       <Pane fx:id="pnPaneEscenario" layoutY="161.0" onKeyReleased="#moverObjeto" prefHeight="421.0" prefWidth="817.0">
          <children>
-            <ImageView fx:id="coche1" fitHeight="63.0" fitWidth="150.0" layoutX="61.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="coche1" fitHeight="63.0" fitWidth="150.0" layoutX="61.0" layoutY="235.0" onMouseClicked="#seleccionarCoche" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../images/car.png" />
                </image>
             </ImageView>
-            <ImageView fx:id="coche2" fitHeight="63.0" fitWidth="113.0" layoutX="509.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="coche2" fitHeight="63.0" fitWidth="113.0" layoutX="509.0" layoutY="81.0" onMouseClicked="#seleccionarCoche" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../images/car.png" />
                </image>
